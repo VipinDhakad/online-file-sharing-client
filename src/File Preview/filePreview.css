@@ -1,0 +1,31 @@
+/* Style for the File Details and Image Preview */
+.file-details {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .file-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .file-details p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .image-preview {
+    margin: 10px;
+  }
+  
+  .image-preview img {
+    max-width: 100%;
+    max-height: 200px; /* You can adjust the maximum height as needed */
+    display: block;
+    margin: 0 auto;
+  }
+  
