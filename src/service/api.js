@@ -1,11 +1,7 @@
 import axios from 'axios';
-// import dotenv from 'dotenv';
 
-// dotenv.config();
 
-// const API_URI = process.env.API_URI;
-const APP_URI = "http://localhost:8000";
-// const APP_URI = process.env.APP_URI;//
+const APP_URI = "https://file-sharing-iaye.onrender.com/";
 
 export const uploadFile = async (data) => {
     // data= name, file
