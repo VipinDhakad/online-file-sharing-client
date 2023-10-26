@@ -3,6 +3,7 @@ import "./App.css";
 import { uploadFile } from "./service/api";
 import LinkAndQRDisplay from "./LinkQr/linkQr";
 import FilePreview from "./File Preview/filePreview.js";
+import homeImage from './assets/homeImage.jpeg';
 
 function App() {
   const [file, setFile] = useState("");
@@ -10,8 +11,7 @@ function App() {
 
   const fileInputRef = useRef();
 
-  const url =
-    "https://i.pinimg.com/originals/16/46/24/1646243661201a0892cc4b1a64fcbacf.jpg";
+
 
   useEffect(() => {
     const getImage = async () => {
@@ -34,14 +34,18 @@ function App() {
 
   return (
     <div className="container">
-      <img src={url} className="img" alt=""/>
+      <img src={homeImage} className="img" alt=""/>
       <div className="wrapper">
         <h1>Simple file sharing!</h1>
         <p>Upload and share the download link.</p>
 
         {!file && (
           <>
-            <button onClick={() => onUploadClick()}>Upload</button>
+            <button 
+              onClick={() => onUploadClick()}
+              >
+                Upload
+              </button>
             <input
               type="file"
               ref={fileInputRef}

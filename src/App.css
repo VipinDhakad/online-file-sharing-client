@@ -42,15 +42,18 @@ input:focus-visible {
 }
 
 button {
-  width: 150px;
-  height: 40px;
-  border-radius: 5px;
-  background-color: #445A6F;
-  border: 1px solid #445A6F;
-  color: #fff;
-  font-size: 20px;
   margin: 20px 0;
-  cursor: pointer;
+  background-color: #3498db; /* Use a beautiful color (blue in this case) */
+  color: #fff; /* Text color */
+  border: none; /* Remove the border */
+  padding: 15px 30px; /* Adjust the padding to make it larger */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Show pointer cursor on hover */
+  font-size: 1.2rem; /* Increase font size */
+  transition: background-color 0.3s ease; /* Add a smooth background color transition on hover */
+  &:hover {
+    background-color: #2c3e50; /* Darker color on hover */
+  }
 }
 
 /* Add a fixed height for .tab-content */
