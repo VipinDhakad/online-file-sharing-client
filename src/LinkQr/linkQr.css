@@ -1,28 +1,35 @@
 /* CSS for LinkAndQRDisplay Component */
+*{
+  padding: 0;
+  margin: 0;
+}
 .tab-box {
     display: flex;
     flex-direction: column;
-    width: 300px; /* Set a fixed width */
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 10px; /* Add border radius for a 3D box effect */
-    overflow: hidden; /* Hide overflowing content */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    width: 300px;
+    overflow: hidden; 
     align-items: center;
-
+    padding: 0;
   }
   
-
+  .tab-buttons {
+    display: flex;
+    gap: 0; 
+    margin-top: 0; 
+    padding-top: 0;
+    width: 100%;
+}
   
   .tab-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px; /* Add padding inside the box */
+    padding: 10px; 
   }
   
   .link-container {
-    width: 300px; /* Set a fixed width for the link container */
+    width: 300px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,21 +39,26 @@
   .link {
     font-size: 16px;
     margin-bottom: 10px;
-    overflow-wrap: break-word; /* Allow the text to wrap onto the next line */
-    white-space: pre-wrap; /* Preserve whitespace and allow wrapping */
-    text-align: center; /* Center-align the text */
-    width: 100%; /* Ensure the link takes up the full width of the container */
+    overflow-wrap: break-word; 
+    white-space: pre-wrap; 
+    text-align: center; 
+    width: 100%; 
     padding: 5px;
+    color: rgb(18, 64, 122);
   }
   
   .copy-button {
-    padding: 5px 10px;
+    padding: 15px 30px;
     cursor: pointer;
-    background-color: #445A6F; /* Background color for the copy button */
-    color: white; /* Text color for the copy button */
+    background-color: #445A6F; 
+    color: white; 
     border: none;
-    border-radius: 5px;
-    margin-top: 5px; /* Add margin to separate the link and copy button */
+    border-radius: 10px;
+    margin: 20px 0;
+    font-size: 1.2rem; 
+    &:hover {
+      background-color: #2c3e50; 
+    }
   }
   
   .qr-container {
@@ -67,30 +79,25 @@
 
 
   
-  .tab-buttons {
-    display: flex;
-    gap: 0; /* Remove gap between buttons */
-    margin-top: 0; /* Reset any top margin */
-    padding-top: 0; /* Reset any top padding */
-}
+
 
 .tab-button {
+    margin-top: 0;
+    color: #445A6F;
+    border: none;
+    padding: 10px;
     flex: 1;
     cursor: pointer;
-    background: transparent;
-    border: none;
-    color: #445A6F;
-    padding: 10px;
-    margin-top: 0;
     height: 70px;
-    transition: background-color 0.3s; /* Add transition for background color change */
+    transition: background-color 0.3s; 
+    background: transparent;
+    font-size: 1.2rem; 
   }
   
   
   .active-tab {
     background-color: #445A6F !important;
     color: white !important;
-    border-top-left-radius: 5px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }

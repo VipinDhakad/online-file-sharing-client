@@ -27,14 +27,14 @@ function LinkAndQRDisplay({ result }) {
         <button
           onClick={() => handleTabChange("link")}
           className={`tab-button ${activeTab === "link" ? "active-tab" : ""}`}
-          style={{borderTopRightRadius:0}}
+          style={{borderTopLeftRadius: 10}}
         >
           Link
         </button>
         <button
           onClick={() => handleTabChange("qr")}
           className={`tab-button ${activeTab === "qr" ? "active-tab" : ""}`}
-          style={{borderTopLeftRadius:0}}
+          style={{borderTopRightRadius:10}}
         >
           QR Code
         </button>

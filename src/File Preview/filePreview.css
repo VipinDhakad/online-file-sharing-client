@@ -1,11 +1,12 @@
 /* Style for the File Details and Image Preview */
 .file-details {
-    margin: 10px;
+    display: flex;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #f5f5f5;
+    background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
   }
   
   .file-details h2 {
