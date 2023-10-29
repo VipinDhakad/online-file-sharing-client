@@ -14,7 +14,6 @@ function App() {
   const fileInputRef = useRef();
 
 
-
   useEffect(() => {
     const getImage = async () => {
       if (file) {
