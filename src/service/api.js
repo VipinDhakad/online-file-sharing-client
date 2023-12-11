@@ -2,6 +2,7 @@ import axios from 'axios';
 
 
 const APP_URI = "https://file-sharing-iaye.onrender.com";
+// const APP_URI = "http://localhost:6010"
 
 export const uploadFile = async (data) => {
     // data= name, file
