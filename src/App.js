@@ -6,13 +6,12 @@ import FilePreview from "./File Preview/filePreview.js";
 
 import homepage2 from './assets/homepage2.jpg';
 
-
 function App() {
   const [file, setFile] = useState("");
   const [result, setResult] = useState("");
+  const [uploadProgress, setUploadProgress] = useState(0); // Track upload progress
 
   const fileInputRef = useRef();
-
 
   useEffect(() => {
     const getImage = async () => {
@@ -21,9 +20,8 @@ function App() {
         data.append("name", file.name);
         data.append("file", file);
 
-        const response = await uploadFile(data);
-        // console.log("res is",response);
-        setResult(response.path);
+        const response = await uploadFile(data, setUploadProgress); // Pass progress callback
+        setResult(response?.path || ""); // Handle case where response might be undefined
       }
     };
     getImage();
@@ -33,19 +31,23 @@ function App() {
     fileInputRef.current.click();
   };
 
-
   return (
-    <div className="container" style={{ backgroundImage: `url(${homepage2})`, backgroundSize: "cover", backgroundPosition: "center", height: "100vh",}}>
-      <div className="wrapper" >
+    <div
+      className="container"
+      style={{
+        backgroundImage: `url(${homepage2})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "100vh",
+      }}
+    >
+      <div className="wrapper">
         <h1>Simple File Sharing!</h1>
         <p>Upload and share the download link.</p>
 
         {!file && (
           <>
-            <button
-              onClick={() => onUploadClick()}
-              className = "uploadButton"
-            >
+            <button onClick={() => onUploadClick()} className="uploadButton">
               Upload
             </button>
             <input
@@ -58,21 +60,22 @@ function App() {
         )}
 
         {file && (
-          <div className="two-column-layout" >
-            <div className="column" >
+          <div className="two-column-layout">
+            <div className="column">
               <FilePreview file={file} />
             </div>
 
             <div className="column">
-              <LinkAndQRDisplay result={result} />
+              {uploadProgress > 0 && uploadProgress < 100 && (
+                <p>Uploading... {uploadProgress}%</p>
+              )}
+              {uploadProgress === 100 && <LinkAndQRDisplay result={result} />}
             </div>
           </div>
         )}
       </div>
     </div>
   );
-
-
 }
 
 export default App;
