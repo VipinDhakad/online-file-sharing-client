@@ -4,7 +4,7 @@ import { uploadFile } from "./service/api";
 import LinkAndQRDisplay from "./LinkQr/linkQr";
 import FilePreview from "./File Preview/filePreview.js";
 
-import homepage2 from './assets/homepage2.jpg';
+import homepage2 from "./assets/homepage2.jpg";
 
 function App() {
   const [file, setFile] = useState("");
@@ -66,9 +66,19 @@ function App() {
             </div>
 
             <div className="column">
-              {uploadProgress > 0 && uploadProgress < 100 && (
-                <p>Uploading... {uploadProgress}%</p>
+              {uploadProgress >= 0 && uploadProgress < 100 && (
+                <div className="progressContainer">
+                  <div className="loader-container">
+                    <div
+                      className="loader"
+                      style={{ width: `${uploadProgress}%` }}
+                    ></div>
+                  </div>
+
+                  <p className="upload-percentage">{uploadProgress}%</p>
+                </div>
               )}
+
               {uploadProgress === 100 && <LinkAndQRDisplay result={result} />}
             </div>
           </div>

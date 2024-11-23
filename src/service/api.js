@@ -6,11 +6,14 @@ const APP_URI = "https://file-sharing-iaye.onrender.com";
 
 export const uploadFile = async (data, setUploadProgress) => {
     try {
+
+
       const response = await axios.post(`${APP_URI}/upload`, data, {
         onUploadProgress: (progressEvent) => {
           const progress = Math.round(
             (progressEvent.loaded / progressEvent.total) * 100
           );
+       
           setUploadProgress(progress); // Update progress in the parent component
         },
       });
