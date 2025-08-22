@@ -1,14 +1,19 @@
 /* Style for the File Details and Image Preview */
 .file-details {
     display: flex;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    /* color: #aa81a8; */
+    padding: 0;
+    width: 25rem;
+    height:25rem;
+    border-radius: 14px;
+    background: #363636;
+    box-shadow:  9px -9px 18px #181818,
+    -9px 9px 18px #484848;
+    margin-top:10px;
+    margin-right:20px;
   }
+.file-details div{
+    padding:10px;
+}
   
   .file-details h2 {
     font-size: 20px;

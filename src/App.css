@@ -15,7 +15,7 @@
 
 .wrapper {
   flex: 1;
-  background: rgba(207, 197, 197, 0.616);
+  /* background: rgba(207, 197, 197, 0.616); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,10 +26,16 @@
 h1 {
   font-size: 40px;
   font-weight: 600;
-  color: #203242;
+  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin: 20px 0;
   justify-content: center;
   align-items: center;
+}
+.wrapper p{
+  color: #abbaff;
 }
 
 input {
@@ -44,7 +50,7 @@ input:focus-visible {
 
 .uploadButton {
   margin: 20px 0;
-  background-color: #3498db; 
+  background-color: #7257b3;
   color: #fff; 
   border: none; 
   padding: 15px 30px; 
@@ -53,7 +59,7 @@ input:focus-visible {
   font-size: 1.2rem; 
   transition: background-color 0.3s ease; 
   &:hover {
-    background-color: #2c3e50; 
+    background-color: #965db9;
   }
 }
 
@@ -75,12 +81,10 @@ input:focus-visible {
 }
 
 .column {
-  flex: 1;
-  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: row;
   padding: 0;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
 }
 
 
@@ -121,7 +125,6 @@ input:focus-visible {
   color: #333; /* Neutral text color */
   font-weight: bold;
 }
-
 
 
 @media (max-width: 768px) {

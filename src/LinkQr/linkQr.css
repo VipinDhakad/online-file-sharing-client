@@ -6,10 +6,17 @@
 .tab-box {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 25rem;
+    height:25rem;
     overflow: hidden; 
     align-items: center;
     padding: 0;
+    border-radius: 14px;
+    background: #363636;
+    box-shadow:  9px -9px 18px #181818,
+    -9px 9px 18px #484848;
+    margin-top:10px;
+    margin-right: 20px;
   }
   
   .tab-buttons {
@@ -44,13 +51,13 @@
     text-align: center; 
     width: 100%; 
     padding: 5px;
-    color: rgb(18, 64, 122);
+    color: white;
   }
   
   .copy-button {
     padding: 15px 30px;
     cursor: pointer;
-    background-color: #445A6F; 
+    background-color: #7257b3;
     color: white; 
     border: none;
     border-radius: 10px;
@@ -83,7 +90,7 @@
 
 .tab-button {
     margin-top: 0;
-    color: #445A6F;
+    color: white;
     border: none;
     padding: 10px;
     flex: 1;
@@ -96,7 +103,7 @@
   
   
   .active-tab {
-    background-color: #445A6F !important;
+    background-color: #7257b3 !important;
     color: white !important;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
