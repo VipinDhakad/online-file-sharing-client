@@ -5,9 +5,6 @@ import LinkAndQRDisplay from "./LinkQr/linkQr";
 import FilePreview from "./File Preview/filePreview.js";
 
 function App() {
-  const dummyFile = new File(["dummy content"], "dummy.txt", {
-    type: "text/plain",
-  });
 
   const [file, setFile] = useState(null);
   const [result, setResult] = useState("");
@@ -37,7 +34,6 @@ function App() {
       <div
           className="container"
           style={{
-            background: "-webkit-linear-gradient(to right, #000000, #434343)",
             background: "linear-gradient(to right, #000000, #434343)",
           }}
       >
